@@ -31,7 +31,7 @@ public class MenuDto {
   public MenuDto(Long id, String name, Set<DishDto> dishes) {
     this.id = id;
     this.name = name;
-    this.dishes = dishes;
+    this.dishes = dishes
   }
 
   public static List<MenuDto> fromModelIterable(Iterable<Menu> models) {
