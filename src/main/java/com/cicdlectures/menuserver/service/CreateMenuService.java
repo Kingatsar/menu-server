@@ -52,4 +52,8 @@ public class CreateMenuService {
 
     return dedupDishes;
   }
+
+  public MenuRepository getMenuRepository() {
+    return this.menuRepository;
+  }
 }
