@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: ls -l # Liste les fichier du répertoire courant
-      - run: cat README.md # Affiche le contenu du fichier `README.md` à la base du dépôt
+      - run: cat ../README.md # Affiche le contenu du fichier `README.md` à la base du dépôt
