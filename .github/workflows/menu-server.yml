@@ -1,0 +1,22 @@
+name: menu-server
+on:
+  - push
+jobs:
+  container_dire_bonjour:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: actions/checkout
+        uses: actions/checkout@v3
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17.0.6'
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.5
+        with:
+          maven-version: 3.8.6
+      - name: Compile Maven
+        run: mvn Compile
+      - name: Maven package
+        run: mvn package
