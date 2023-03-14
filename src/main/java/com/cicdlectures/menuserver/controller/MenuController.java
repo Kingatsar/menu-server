@@ -29,7 +29,7 @@ public class MenuController {
   @Autowired
   MenuController(CreateMenuService createMenuService, ListMenuService listMenuService) {
     this.createMenuService = createMenuService;
-    this.listMenuService = listMenuService;
+    this.listMenuService = listMenuServ
   }
 
   @GetMapping(path = "/menus", produces = "application/json")
