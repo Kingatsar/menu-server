@@ -15,5 +15,5 @@ jobs:
       - name: Cowsay output dragon
         uses: Code-Hex/neo-cowsay-action@v1
         with:
-          message: steps.package.outputs.content
+          message: "${{steps.package.outputs.content}}"
           cow: "dragon"
