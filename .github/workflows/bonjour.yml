@@ -4,9 +4,6 @@ on:
 jobs:
   container_dire_bonjour:
     runs-on: ubuntu-22.04
-    container:
-      image: ghcr.io/cicd-lectures/gitpod:latest
-      options: --user=root
     steps:
       - name: Check out from repo code
         uses: actions/checkout@v3
@@ -15,6 +12,8 @@ jobs:
         uses: juliangruber/read-file-action@v1
         with:
           path: ./README.md
-      - name: Dragon and README content
-        run: cowsay -f dragon "${{steps.package.outputs.content}}" # Affiche le contenu du fichier `README.md` à la base du dépôt
-
+      - name: Cowsay output dragon
+        uses: Code-Hex/neo-cowsay-action@v1
+        with:
+          message: steps.package.outputs.content
+          cow: "dragon"
