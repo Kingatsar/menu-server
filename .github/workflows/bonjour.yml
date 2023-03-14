@@ -10,6 +10,11 @@ jobs:
     steps:
       - name: Check out from repo code
         uses: actions/checkout@v3
-      - run: ls -l # Liste les fichier du répertoire courant
-      - run: cat README.md | cowsay -f dragon # Affiche le contenu du fichier `README.md` à la base du dépôt
+      - name: Read README.md
+        id: package
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./README.md
+      - name: Dragon and README content
+        run: cowsay -f dragon "${{steps.package.outputs.content}}" # Affiche le contenu du fichier `README.md` à la base du dépôt
 
