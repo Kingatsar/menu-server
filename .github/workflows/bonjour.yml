@@ -7,5 +7,5 @@ jobs:
     steps:
       - name: Check out from repo code
         uses: actions/checkout@v3
-      - run: ls -l /workspace/menu-server # Liste les fichier du répertoire courant
+      - run: ls -l # Liste les fichier du répertoire courant
       - run: cat README.md # Affiche le contenu du fichier `README.md` à la base du dépôt
