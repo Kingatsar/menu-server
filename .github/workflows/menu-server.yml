@@ -2,7 +2,7 @@ name: menu-server
 on:
   - push
 jobs:
-  container_dire_bonjour:
+  Menu_server:
     runs-on: ubuntu-22.04
     steps:
       - name: actions/checkout
@@ -10,8 +10,8 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'zulu'
-          java-version: '17.0.6'
+          distribution: "zulu"
+          java-version: "17.0.6"
       - name: Set up Maven
         uses: stCarolas/setup-maven@v4.5
         with:
