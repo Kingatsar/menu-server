@@ -49,7 +49,7 @@ public class MenuController {
       createMenuService.getMenuRepository().deleteById(id);
       return 200;
     } catch (Exception e) {
-      return 400;
+      return 404;
     }
 
   }
