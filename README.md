@@ -3,7 +3,8 @@
 ## Lancer le projet
 ### ajout d'une ligne test
 ```bash
-./executer.sh
+mvn compile 
+mvn spring-boot:run
 ```
 
 # Dépendances du Projet
