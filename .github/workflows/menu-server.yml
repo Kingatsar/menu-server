@@ -17,6 +17,6 @@ jobs:
         with:
           maven-version: 3.8.6
       - name: Compile Maven
-        run: mvn Compile
+        run: mvn compile
       - name: Maven package
         run: mvn package
