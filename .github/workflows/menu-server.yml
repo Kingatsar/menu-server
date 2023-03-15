@@ -25,3 +25,7 @@ jobs:
         run: mvn package
       - name: Execute Integration tests
         run: mvn verify -DskipUnitTests=true
+      - if: contains(github.ref, 'ref/tag/v')
+        name: Github release
+        run: gh release create
+
