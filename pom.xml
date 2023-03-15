@@ -56,6 +56,13 @@
           <skipTests>${skipUnitTests}</skipTests>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <configuration>
+          <skipTests>${skipIntegrationTests}</skipTests>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
