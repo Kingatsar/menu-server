@@ -19,5 +19,9 @@ jobs:
           maven-version: 3.8.6
       - name: Compile Maven
         run: mvn compile
+      - name: Execute Unit tests
+        run: mvn test
       - name: Maven package
         run: mvn package
+      - name: Execute Integration tests
+        run: mvn verify -DskipUnitTests=true
